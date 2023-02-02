@@ -3,9 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-header{
-  font-family: sans-serif;
-  position: absolute;
+.flexy{
+  display: flexbox;
+  justify-content: center;
+  margin: 1%;
+
 }
 .background{
   width: 100%;
@@ -19,140 +21,238 @@ header{
 }
 .scroll-down{
   position: absolute;
-  left: 430px;
-  top: 40px;
-  
+  display: flexbox;
+  justify-content: center;
+  margin-left: 17%;
+  margin-top: 0.9%;
 }
 .scroll-down i{
   display: block;
-  padding: 12px;
-  font-size: 25px;
+  padding: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   background: #009688;
-  border-radius: 30px;
+  border-radius: 2rem;
   transition: all .50s ease;
   
 }
 .scroll-down i:hover{
   transform: translateY(-5px);
 }
-.title{
+
+.scroll-top{
+  position: fixed;
+  display: flexbox;
+  justify-content: center;
+  margin-left: 97%;
+  margin-top: 47.5%;
+}
+.scroll-top i{
+  display: block;
+  padding: 1rem;
+  font-size: 1.5rem;
   color: #fff;
-  position: absolute;
-  text-align: center;
-  top: 17%;
-  margin-left: 42%;
-  font-size: 50px;
-  font-family: Arial;
+  background: #009688;
+  border-radius: 30px;
+  transition: all .50s ease;
+
 }
-.title h1{
-  font-size: 70px;
-  text-align: center;
+.scroll-top i:hover{
+  transform: translateY(-5px);
+  
 }
-.title p{
-  font-size: 16px;
-  text-align: center;
+
+::-webkit-scrollbar{
+  display: none;
 }
+
+
 a{
   text-decoration: unset;
 }
-@media only screen and (max-width:3200px){
-  section h1{
-    margin-left: 2%;
-    margin-top: 2%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:2560px){
+  
   }
-  section p{
-    margin-left: 2%;
-    margin-top: 2%;
-  }
-}
-@media only screen and (max-width:2560px){
-  section h1{
-    margin-left: 2%;
-    margin-top: 1%;
-  }
-  section p{
-    margin-left: 2%;
-    margin-top: 1.5%;
-    margin-right: 3%; 
-    font-size: 2.5rem;
-    
+  p{
+    margin: 1.5%;
   }
   .background{
     height: 100%;
   }
-  .bottom{
-    margin-bottom: 3%;
+  #menu-icon{
+    display: block;
+    font-size: 50px;
+  }
+  .navbar{
+    position: absolute;
+    top: 120%;
+    right: -100%;
+    width: 270px;
+    height: fit-content;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
+    box-shadow: 1px 1px 10px #009688;
+  }
+  .navbar a{
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all .50s ease;
+  }
+  .navbar a:hover{
+    color: var(--text-color);
+    transform: translateY(10px);
+  }
+  .navbar a.active{
+    color: var(--text-color);
+  }
+  .navbar.open{
+    right: 2%;
+  }
+@media (max-width:2064px){
+  p{
+    font-size: 2.7rem;
   }
 }
-@media only screen and (max-width:1920px){
-  section p{
-    margin-left: 2%;
-    margin-top: 1.5%;
-    margin-right: 3%; 
+@media (max-width:1920px){
+  
+}
+@media (max-width:1705px){
+  
+}
+@media (max-width:1634px){
+  
+}
+@media (max-width:1600px){
+  
+  p{
     font-size: 2.5rem;
-    
-  }
-  .background{
-    height: 100%;
-  }
-  .bottom{
-    margin-bottom: 3.5%;
   }
 }
-@media only screen and (max-width:1600px){
-  .bottom{
-    margin-bottom: 3.5%;
-  }
-  section p{
-    margin-left: 2%;
-    margin-top: 1.5%;
-    margin-right: 3%; 
+@media (max-width:1552px){
+  
+}
+@media (max-width:1429px){
+  
+}
+@media (max-width:1389px){
+ 
+}
+@media (max-width:1185px){
+  
+}
+@media (max-width:1050px){
+  p{
     font-size: 2.2rem;
+    margin: 3%;
   }
+
 }
-@media only screen and (max-width:1280px){
-  section h1{
-    margin-top: 1%;
-    margin-left: 2%;
-    
-  }
-  section p{
-    margin-left: 4%;
-    font-size: 2.4rem;
-    margin-top: 1%;
-    margin-right: 3%;
-  }
-  .background{
-    height: 100%;
-  }
-  .scroll-down{
-    margin-top: -5px;
-  }
+@media (max-width:889px){
+  
 }
-@media only screen and (max-width:812px){
-  section h1{
-    margin-left: 4%;
-    margin-top: 5%;
+@media (max-width:790px){
+  
+}
+@media (max-width:720px){
+  p{
+    margin: 2%;
+    padding: 2%;
+  }
+
+}
+@media (max-width:600px){
+  
+}
+@media (max-width:500px){
+  h1{
     font-size: 3.5rem;
-    color: #fff;
+    margin: 4%;
   }
-  section p{
-    margin-left: 3%;
-    margin-top: 7%;
-    margin-right: 3%; 
+  p{
+    padding: 2%;
+  }
+
+}
+@media (max-width:414px){
+  
+}
+@media (max-width:375px){
+  p{
     font-size: 2rem;
   }
+
+}
+@media (max-width:320px){
+  h1{
+    font-size: 2.7rem;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+
+}
+@media (max-width:293px){
   
-  .background{
-    height: 100%;
-  }
-  
-  .scroll-down{
-    margin-left:-120px;
-    margin-top: -12px;
-  }
-  .bottom{
-    margin-bottom: 15%;
-  }
 }

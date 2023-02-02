@@ -17,3 +17,4 @@ function changeBg(){
 }
 
 window.addEventListener('scroll', changeBg)
+
