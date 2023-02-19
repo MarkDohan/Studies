@@ -1,8 +1,8 @@
-let menu = document.querySelector('#menu-icon');
+let menu = document.querySelector('.container');
 let navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {
-  menu.classList.toggle('bx-x');
+  menu.classList.toggle("change");
   navbar.classList.toggle('open')
 }
 
@@ -17,4 +17,3 @@ function changeBg(){
 }
 
 window.addEventListener('scroll', changeBg)
-

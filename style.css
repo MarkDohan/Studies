@@ -6,6 +6,59 @@
   text-decoration: none;
   list-style: none;
 }
+
+
+
+
+
+.container{
+  display: inline-block;
+  cursor: pointer;
+  margin: 3%;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+
+
+.change .bar1 {
+  transform:  translate(0 , 11px) rotate(-45deg);
+}
+.change .bar2 {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.change .bar3 {
+  transform: translate(0 , -11px) rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root{
   --bg-color:#222327;
   --text-color:#fff;
@@ -75,13 +128,7 @@ header{
   color: var(--main-color);
 }
 
-#menu-icon{
-  font-size: 35px;
-  cursor:pointer;
-  color: var(--text-color);
-  z-index: 10001;
-  display: none;
-}
+
 main h1{
   font-size: var(--big-font);
   display: flex;
@@ -256,6 +303,9 @@ a button{
     font-size: 4.2rem;
     margin-top: 6%;
   }
+  .container{
+    display: none;
+  }
 }
 @media (max-width:2064px){
   header {
@@ -318,9 +368,8 @@ a button{
   }
 }
 @media (max-width:1185px){
-  #menu-icon{
+  .container{
     display: block;
-    font-size: 50px;
   }
   .navbar{
     position: absolute;
