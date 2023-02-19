@@ -95,18 +95,21 @@ header{
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  transition: all .50s ease;
 }
 
 .logo i{
   color: palegreen;
   font-size: 55px;
   margin-right: 3px;
-
 }
 .logo span{
   color: var(--text-color);
   font-size: 3rem;
   font-weight: 600;
+}
+.logo:hover{
+  transform: translateY(-5px);
 }
 .navbar{
   display: flex;
@@ -191,10 +194,10 @@ a button{
   bottom: 0;
   transition: 0.5s;
   z-index: -1;
- 
 }
 .filler:hover::before{
   width: 100%;
+ 
 }
 .filler{
   z-index: 2;
