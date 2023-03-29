@@ -203,9 +203,8 @@ a button{
   z-index: 2;
 }
 .bgColor{
-  background: rgb(0,150,136);
-  background: linear-gradient(90deg, rgba(0,150,136,1) 0%, rgba(0,150,96,0) 100%);
   width: 100%; 
+  background: linear-gradient(to right, #009688, transparent);
  }
 
 
