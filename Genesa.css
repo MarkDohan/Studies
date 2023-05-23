@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  background-color: black;
+}
 .back-to-top{
   position: fixed;
   bottom: 2rem;
@@ -45,6 +48,7 @@ header{
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+
 }
 .scroll-down{
   position: absolute;
@@ -202,6 +206,7 @@ b{
   
   .background{
     height: 100%;
+   
   }
   
   .scroll-down{
