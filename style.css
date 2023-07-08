@@ -1,84 +1,25 @@
 *{
+  margin: 0;  /* open menu on phones */
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   list-style: none;
 }
-html{
-  background-color: black;
-}
 
-
-
-
-
-.container{
-  display: inline-block;
-  cursor: pointer;
-  margin: 3%;
-}
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #fff;
-  margin: 6px 0;
-  transition: 0.4s;
-  border-radius: 3px;
-}
-
-
-.change .bar1 {
-  transform:  translate(0 , 11px) rotate(-45deg);
-}
-.change .bar2 {
-  transform: translateX(10px);
-  opacity: 0;
-}
-.change .bar3 {
-  transform: translate(0 , -11px) rotate(45deg);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root{
-  --bg-color:#222327;
-  --text-color:#fff;
-  --main-color:#009688;
+.bgColor{
+  width: 100%; 
+  background: linear-gradient(to right, #ffffff, transparent);
+ }
+.bgColor a span{
+  color: #151515;
 }
 body{
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.background{
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: fit-content;
+  color: #fff;
+  background: url(Background.png) rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(background.jpg);
+  background-blend-mode: darken;
 }
 header{
   position: fixed;
@@ -96,299 +37,222 @@ header{
 .logo{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  transition: all .50s ease;
-}
-
-.logo i{
-  color: palegreen;
-  font-size: 55px;
-  margin-right: 3px;
 }
 .logo span{
-  color: var(--text-color);
-  font-size: 3rem;
+  color: #fff;
+  font-size: 3.5rem;
   font-weight: 600;
+  transition: all 0.50s ease;
 }
-.logo:hover{
+.logo span:hover{
   transform: translateY(-5px);
+  transition: all 0.50s ease;
 }
 .navbar{
   display: flex;
-  justify-content: space-between;
-  text-align: center;
 }
 .navbar a{
-  color: var(--text-color);
-  font-size: 1.3rem;
+  color: #fff;
+  font-size: 1.7rem;
   font-weight: 500;
   padding: 5px 0;
-  margin: 0px 50px;
+  margin: 0px 30px;
   transition: all 0.50s ease;
 }
-.navbar a.active{
-  color: var(--text-color);
-}
 .navbar a:hover{
-  color: var(--main-color);
+  text-shadow: 5px 5px #000;
+  transition: all 0.50s ease;
 }
-
-
-main h1{
-  font-size: var(--big-font);
-  display: flex;
-  margin-left: 42%;
-  margin-right: auto;
-  margin-top: 10%;
+.main{
+  display: none;
+  align-items: center;
 }
-
-.column1{
-  margin-top: 0%;
-  display: flexbox;
-  width: 50%;
-  text-align: center;
-  float: left;
-}
-.column1 h1{
-  color: #fff;
-  margin-left: 0%;
-  justify-content: center;
-  font-size: 3rem;
-}
-.column2{
-  margin-top: 0%;
-  display: flexbox;
-  width: 50%;
-  text-align: center;
-  float: right;
-}
-.column2 h1{
-  color: #fff;
-  margin-left: 0%;
-  justify-content: center;
-  font-size: 3rem;
-}
-section h1{
-  color: #fff;
-}
-
-a button{
-  width: 75px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 2px solid #009688;
-  background: transparent;
-  color: #fff;
+.container{
+  display: inline-block;
   cursor: pointer;
+      
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+.bar1{
+  width: 50%;
+      
+}
+.bar3{
+  width: 50%;
+  margin-left: 17px;
+      
+}
+    
+.Changes .bar1 {
+  transform: translate(15px, 5px) rotate(-45deg);
+}
+.Changes .bar2 {
+  transform: translateY(0px) rotate(45deg);
+}
+.Changes .bar3 {
+  transform: translate(-14.5px, -5px) rotate(-45deg);
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+a button{
+  background: transparent;
+  border: 2px solid #fff;
+  color:#fff;
+  cursor: pointer;
+  padding: 2px 5px;
   position: relative;
-  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  font-size: 1.7rem;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 1px;
+  margin-top: 20px;
 }
-.filler::before{
-  content: ' ';
-  height: 100%;
-  width: 0;
-  background: #009688;
+button::before{
+  content: '';
   position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: 0.5s;
+  inset: 0;
+  background: #fff;
   z-index: -1;
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.5s ease-in-out;
 }
-.filler:hover::before{
-  width: 100%;
- 
+button:hover{
+  color: #000;
 }
-.filler{
-  z-index: 2;
+button:hover::before{
+  clip-path: circle(100% at 50% 50%);
 }
-.bgColor{
-  width: 100%; 
-  background: linear-gradient(to right, #009688, transparent);
- }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    
+    
+    
 @media (max-width:2560px){
-  .title{
-    margin-left: 0%;
-    display: flexbox;
-    justify-content: center;
-    font-size: 4.2rem;
-    margin-top: 6%;
+  .column{
+    margin-top: 10%;
+    text-align: center;
   }
-  .container{
-    display: none;
-  }
-}
-@media (max-width:2064px){
-  header {
-    padding: 10px 4%;
-    transition: .2s;
-  }
+  .column h1{
+    font-size: 3.5rem;
+  }  
 }
 @media (max-width:1920px){
-  .column1, .column2{
-    margin-top: -2%;
-  }
-  .title{
-    margin-top: 6%;
-  }
-  .column1 h1, .column2 h1{
-    font-size: 2.5rem;
-  }
-}
-@media (max-width:1705px){
-  header{
-    padding: 10px 2%;
-  }
-  .title{
-    font-size: 4rem;
-  }
-}
-@media (max-width:1634px){
-  header{
-    padding: 10px 1%;
+  body{
+    background-size: 1920px;
   }
 }
 @media (max-width:1600px){
- header{
-  margin-top: 0%;
- }
- .logo span{
-  font-size: 2.5rem;
- }
+  .logo span{
+    font-size: 3rem;
+  }
+  .navbar a{
+    font-size: 1.3rem;
+  }
+  .column h1{
+    font-size: 2.8rem;
+  }
+  a button{    
+    margin: 3px;
+    padding: 10px;
+    transform: scale(0.7);
+    font-size: 2rem;
+  }
+  body{
+    background-size: 1600px;
+  }
 }
-@media (max-width:1552px){
+@media (max-width:1536px){
   .logo span{
     font-size: 2.4rem;
   }
   .navbar a{
     font-size: 1.1rem;
   }
+  .column h1{
+    font-size: 2.4rem;
+  }
+  a button{    
+    margin: 3px;
+    padding: 10px;
+    transform: scale(0.7);
+    font-size: 2rem;
+  }
+  body{
+    background-size: 1536px;
+  }
 }
-@media (max-width:1429px){
+@media (max-width:1440px){
+  body{
+    background-size: 1600px;
+  }
+}
+@media (max-width:1366px){
+  .logo span{
+    font-size: 2.4rem;
+  }
+  .navbar a{
+    font-size: 1.1rem;
+  }
+  .column h1{
+    font-size: 2.4rem;
+  }
+  a button{
+    margin-top: 20px;
+    margin: 1px;
+    padding: 10px;
+    transform: scale(0.7);
+  }
+}
+@media (max-width:1280px){
   .logo span{
     font-size: 2rem;
   }
-}
-@media (max-width:1389px){
   .navbar a{
-    margin-right: 10px;
+    font-size: 1rem;
   }
-  .title{
-    font-size: 3.5rem;
-    margin-top: 8%;
+  .column h1{
+    font-size: 2rem;
+  }
+  a button{
+    margin-top: 2px;
+    padding: 10px;
+    transform: scale(0.6);
+  }
+  body{
+    background-size: 1280px;
   }
 }
-@media (max-width:1185px){
-  .container{
-    display: block;
-  }
+@media (max-width:1024px){
   .navbar{
     position: absolute;
     top: 120%;
     right: -100%;
     width: 270px;
     height: fit-content;
-    background: var(--main-color);
+    background: var(#151515);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
     transition: all .50s ease;
-    box-shadow: 1px 1px 10px #009688;
+    box-shadow: 1px 1px 10px #fff;
   }
   .navbar a{
     display: block;
@@ -407,103 +271,78 @@ a button{
     right: 2%;
   }
   .logo span{
-    font-size: 3.4rem;
-  }
-  .title{
-    margin-top: 13%;
-  }
-  .column1 h1, .column2 h1{
-    font-size: 2.4rem;
-  }
-}
-@media (max-width:1050px){
-  .title{
-    margin-top: 10%;
-  }
-  .column1{
-    width: 100%;
-    margin-top: -7%;
-  }
-  .column2{
-    width: 100%;
-    margin-top: -7%;
-  }
-  .logo span{
-    font-size: 3rem;
-}
-}
-@media (max-width:889px){
-  .title{
-    font-size: 3rem;
-    margin-top: 13%;
-  }
-  .logo span{
     font-size: 3rem;
   }
-}
-@media (max-width:790px){
-  .logo span{
-    font-size: 2.5rem;
+  body{
+    background-size: 1600px;
   }
-  .title{
-    margin-top: 15.4%;
-  }
-  .background{
-    max-height: 2100px;
-    height: fit-content;
-  }
-}
-@media (max-width:720px){
-  .title{
-    margin-top: 15%;
-  }
-}
-@media (max-width:600px){
-  .column1 h1, .column2 h1{
+  .column h1{
     font-size: 2rem;
+    margin-top: 30px;
   }
-  .logo span{
-    font-size: 2rem;
-  }
-  .logo i{
-    font-size: 2rem;
+  .main{
+    display: flex;
   }
 }
-@media (max-width:500px){
-  .title{
-    margin-top: 20%;
+@media (max-width:768px){
+  body{
+    background-size: cover;
   }
-  .column1{
-    margin-top: -2%;
-  }
-}
-@media (max-width:400px){
-  .title{
-    font-size: 2.5rem;
-    margin-top: 20%;
-  }
-  .background{
-    max-height: 3000px;
+  a button{
+    margin: 1px;
   }
 }
-@media (max-width:350px){
-  .title{
-    margin-top: 28%;
+@media (max-width:425px){
+  body{
+    background-size: cover;
   }
-  .column1 h1, .column2 h1{
-    font-size: 1.7rem;
-  }
-}
-@media (max-width:300px){
-  .logo span{
-    font-size: 1.7rem;
-  }
-}
-@media (max-width:293px){
-  .background{
-    max-height: 4000px;
-  }
-  .column1 h1, .column2 h1{
+  a button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transform: scale(1);
+    padding: 10px;
     font-size: 1.5rem;
   }
+  .column h1{
+    font-size: 2rem;
+    margin-top: 66px;
+  }
+  .logo span{
+    font-size: 2.5rem;
+  }
 }
+@media (max-width:375px){
+  body{
+    background-size: cover;
+  }
+  a button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transform: scale(1);
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  .column h1{
+    font-size: 2rem;
+    margin-top: 66px;
+  }
+  .logo span{
+    font-size: 2.2rem;
+  }
+}
+@media (max-width:320px){
+  .logo span{
+    font-size: 2rem;
+  }
+  a button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transform: scale(1);
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+   
+
+   
