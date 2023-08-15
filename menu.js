@@ -1,7 +1,3 @@
-function YourFunction(b) {
-  b.classList.toggle("Changes");
-}
-
 function changeBg(){
   var header = document.getElementById('scrolling')
   var scrollValue = window.scrollY;
@@ -14,10 +10,7 @@ function changeBg(){
 
 window.addEventListener('scroll', changeBg)
 
-let menu = document.querySelector('.container');
-let navbar = document.querySelector('.navbar');
 
-menu.onclick = () => {
-  menu.classList.toggle("change");
-  navbar.classList.toggle('open')
-}
+
+
+

@@ -8,24 +8,64 @@
       <body>
             <div class="background">
            <header id="scrolling">
+
+            
+
+            <!-- Navigation if not using phone -->
             <a href="#" class="logo"><span>Bible Studies</span></a>
 
             <ul class="navbar">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Verses</a></li>
-              <li><a href="#">God's Promises</a></li>
-              <li><a href="#">Attributes of God</a></li>
-              <li><a href="#">Prophecies about Christ</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Verses</a></li>
+                <li><a href="#">God's Promises</a></li>
+                <li><a href="#">Attributes of God</a></li>
+                <li><a href="#">Prophecies about Christ</a></li>
             </ul>
-        
-            <div class="main">
-                  <div class="container" onclick="YourFunction(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                      </div>
-            </div>   
+
+
+
+            
            </header>
+
+           
+           <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="text">Verses</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="flame-outline"></ion-icon></span>
+                    <span class="text">God's Promises</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="aperture-outline"></ion-icon></span>
+                    <span class="text">Attributes of God</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+                    <span class="text">Prophecies about Christ</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+
+
 
            <div class="row">
             <div class="column left">
@@ -101,6 +141,21 @@
                         <a href="Apoc.html"> <button class="filler">Apoc.</button></a>
             </div>
           </div>
+          
+
+
+          <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item) =>
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+            item.addEventListener('click',activeLink));
+        </script>
+          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
             </div>

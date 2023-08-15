@@ -1,11 +1,15 @@
 *{
-  margin: 0;  /* open menu on phones */
+  margin: 0;  
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
 }
+:root{
+  --clr: #222327
+}
 
+  /* Background Change */
 .bgColor{
   width: 100%; 
   background: linear-gradient(to right, #ffffff, transparent);
@@ -13,6 +17,8 @@
 .bgColor a span{
   color: #151515;
 }
+
+/* Important Parts */
 body{
   min-height: fit-content;
   color: #fff;
@@ -20,6 +26,8 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: darken;
+  justify-content: center;
+  align-items: center;
 }
 header{
   position: fixed;
@@ -34,6 +42,8 @@ header{
   padding: 28px 12%;
   transition: all 0.50s ease;
 }
+
+/* Logo */
 .logo{
   display: flex;
   align-items: center;
@@ -48,6 +58,118 @@ header{
   transform: translateY(-5px);
   transition: all 0.50s ease;
 }
+
+  /* Navigation Mobile */
+
+  .navigation{
+    width: 350px;
+    height: 80px;
+    background:#fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navigation ul{
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+.navigation ul li.active a .icon{
+    transform: translateY(-42px);
+}
+.navigation ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.navigation ul li.active a .text{
+    opacity: 1;
+}
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #454545;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 58.9%;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--clr);
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 58.9%;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--clr);
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
+}   
+
+
+
+
+/* Navigation */
 .navbar{
   display: flex;
 }
@@ -63,43 +185,11 @@ header{
   text-shadow: 5px 5px #000;
   transition: all 0.50s ease;
 }
-.main{
-  display: none;
-  align-items: center;
-}
-.container{
-  display: inline-block;
-  cursor: pointer;
-      
-}
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #fff;
-  margin: 6px 0;
-  transition: 0.4s;
-  border-radius: 3px;
-}
-.bar1{
-  width: 50%;
-      
-}
-.bar3{
-  width: 50%;
-  margin-left: 17px;
-      
-}
-    
-.Changes .bar1 {
-  transform: translate(15px, 5px) rotate(-45deg);
-}
-.Changes .bar2 {
-  transform: translateY(0px) rotate(45deg);
-}
-.Changes .bar3 {
-  transform: translate(-14.5px, -5px) rotate(-45deg);
-}
 
+
+
+
+/* Buttons + Layout */
 .column {
   float: left;
   width: 50%;
@@ -134,8 +224,6 @@ button:hover::before{
   clip-path: circle(100% at 50% 50%);
 }
 
-    
-    /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -143,7 +231,7 @@ button:hover::before{
 }
     
     
-    
+  /* Devices */
 @media (max-width:2560px){
   .column{
     margin-top: 10%;
@@ -152,6 +240,9 @@ button:hover::before{
   .column h1{
     font-size: 3.5rem;
   }  
+  .navigation{
+    display: none;
+  }
 }
 @media (max-width:1920px){
   body{
@@ -241,34 +332,12 @@ button:hover::before{
 }
 @media (max-width:1024px){
   .navbar{
-    position: absolute;
-    top: 120%;
-    right: -100%;
-    width: 270px;
-    height: fit-content;
-    background: var(#151515);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 10px;
-    transition: all .50s ease;
-    box-shadow: 1px 1px 10px #fff;
+    display: none;
   }
-  .navbar a{
+  .navigation{
     display: block;
-    margin: 12px 0;
-    padding: 0px 25px;
-    transition: all .50s ease;
-  }
-  .navbar a:hover{
-    color: var(--text-color);
-    transform: translateY(10px);
-  }
-  .navbar a.active{
-    color: var(--text-color);
-  }
-  .navbar.open{
-    right: 2%;
+    left: 33%;
+    top: 115px;
   }
   .logo span{
     font-size: 3rem;
@@ -280,9 +349,6 @@ button:hover::before{
     font-size: 2rem;
     margin-top: 30px;
   }
-  .main{
-    display: flex;
-  }
 }
 @media (max-width:768px){
   body{
@@ -291,7 +357,18 @@ button:hover::before{
   a button{
     margin: 1px;
   }
-}
+  .navbar{
+    display: none;
+  }
+  .navigation{
+    display: block;
+    top: 100px;
+    margin-left: -6%;
+  }
+  .logo{
+    margin-top: -4%;
+  }
+ }
 @media (max-width:425px){
   body{
     background-size: cover;
@@ -310,7 +387,16 @@ button:hover::before{
   .logo span{
     font-size: 2.5rem;
   }
-}
+  .navigation{
+    display: block;
+    top: 100px;
+    margin-left: -24.5%;
+  }
+  .logo{
+    margin-top: -5%;
+  }
+
+  }
 @media (max-width:375px){
   body{
     background-size: cover;
@@ -328,6 +414,9 @@ button:hover::before{
   }
   .logo span{
     font-size: 2.2rem;
+  }
+  .navigation{
+    margin-left: -30.1%;
   }
 }
 @media (max-width:320px){
