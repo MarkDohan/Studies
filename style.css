@@ -227,7 +227,7 @@ a button:hover{
 }
 @media (max-width: 1920px){
     .background{
-        background: url(Backgrounds/1920.1080.png) rgba(0, 0, 0, 0.6);
+        background: url(1920.1080.png) rgba(0, 0, 0, 0.6);
         background-repeat: no-repeat;
     }
     .navbar a{
@@ -245,7 +245,7 @@ a button:hover{
 }
 @media (max-width: 1600px){
     .background{
-        background: url(Backgrounds/1600.900.png) rgba(0, 0, 0, 0.6);
+        background: url(1600.900.png) rgba(0, 0, 0, 0.6);
         background-repeat: no-repeat;
     }
     .logo span{
@@ -269,7 +269,7 @@ a button:hover{
 }
 @media (max-width: 1400px){
     .background{
-        background: url(Backgrounds/1400.900.png) rgba(0, 0, 0, 0.6);
+        background: url(1400.900.png) rgba(0, 0, 0, 0.6);
         background-repeat: no-repeat;
     }
     .logo span{
@@ -289,7 +289,7 @@ a button:hover{
 }
 @media (max-width: 1366px){
     .background{
-        background: url(Backgrounds/1366.768\ .png) rgba(0, 0, 0, 0.6);
+        background: url(1366.768\ .png) rgba(0, 0, 0, 0.6);
         background-repeat: no-repeat;
     }
     .logo span{
@@ -304,7 +304,7 @@ a button:hover{
 }
 @media (max-width: 1280px){
     .background{
-        background: url(Backgrounds/1280.800.png) rgba(0, 0, 0, 0.6);
+        background: url(1280.800.png) rgba(0, 0, 0, 0.6);
     }
     .logo span{
         font-size: 3rem;
@@ -325,7 +325,7 @@ a button:hover{
 /* 14pm */
 @media (max-width: 430px){
     .background{
-        background: url(Backgrounds/1284.2778\(14pm\).png) rgba(0, 0, 0, 0.6);
+        background: url(1284.2778\(14pm\).png) rgba(0, 0, 0, 0.6);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -365,7 +365,7 @@ a button:hover{
 /* 13pm + 12pm */
 @media (max-width: 428px){
     .background{
-        background: url(Backgrounds/1284.2778\ \(13pm\).png) rgba(0, 0, 0, 0.6);
+        background: url(1284.2778\ \(13pm\).png) rgba(0, 0, 0, 0.6);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -374,7 +374,7 @@ a button:hover{
 /* 11 + 11pm */
 @media (max-width: 414px){
     .background{
-        background: url(Backgrounds/828.1792\ \(11\).png) rgba(0, 0, 0, 0.6);
+        background: url(828.1792\ \(11\).png) rgba(0, 0, 0, 0.6);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -390,7 +390,7 @@ a button:hover{
 /* S21 Ultra */
 @media (max-width: 412px){
     .background{
-        background: url(Backgrounds/1080.2400\ \(S21\ U\).png) rgba(0, 0, 0, 0.6);
+        background: url(1080.2400\ \(S21\ U\).png) rgba(0, 0, 0, 0.6);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -400,7 +400,7 @@ a button:hover{
 /* 12/12p/13/13p/14/14p */
 @media (max-width: 390px){
     .background{
-        background: url(Backgrounds/1170.2532\ \(14\).png) rgba(0, 0, 0, 0.6);
+        background: url(1170.2532\ \(14\).png) rgba(0, 0, 0, 0.6);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -418,7 +418,7 @@ a button:hover{
 /* 11p */
 @media (max-width: 375px){
     .background{
-        background: url(Backgrounds/828.1792\ \(11\).png) rgba(0, 0, 0, 0.6);
+        background: url(828.1792\ \(11\).png) rgba(0, 0, 0, 0.6);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
