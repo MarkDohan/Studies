@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html>
-      <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="style.css">
-            <script src="menu.js"></script>
-      </head>
-      <body>
-            <div class="background">
-           <header id="scrolling">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="header.js"></script>
+</head>
+<body>
+    <div class="background">
+    <header id="scrolling">
+        <a href="#" class="logo"><span>Bible Studies</span></a>
 
-            
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="verses.html">Verses</a></li>
+            <li><a href="promises.html">God's Promises</a></li>
+            <li><a href="attributes.html">Attributes of God</a></li>
+            <li><a href="prophecies.html">Prophecies about Christ</a></li>
+        </ul>
+    </header>
 
-            <!-- Navigation if not using phone -->
-            <a href="#" class="logo"><span>Bible Studies</span></a>
-
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Verses</a></li>
-                <li><a href="#">God's Promises</a></li>
-                <li><a href="#">Attributes of God</a></li>
-                <li><a href="#">Prophecies about Christ</a></li>
-            </ul>
-
-
-
-            
-           </header>
-
-           
-           <div class="navigation">
+    <div class="navigation">
         <ul>
             <li class="list active">
                 <a href="#">
@@ -63,13 +55,10 @@
             <div class="indicator"></div>
         </ul>
     </div>
-
-
-
-
-           <div class="row">
-            <div class="column left">
-                  <h1>Vechiul Testament</h1>
+    
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1>Vechiul Testament</h1>
                         <a href="Genesa.html"><button class="filler">Gen.</button></a>
                         <a href="Exod.html"><button class="filler">Exod.</button></a>
                         <a href="Levi.html"><button class="filler">Lev.</button></a>
@@ -109,10 +98,10 @@
                         <a href="Hag.html"><button class="filler">Hag.</button></a>
                         <a href="Zah.html"><button class="filler">Zah.</button></a>
                         <a href="Mal.html"><button class="filler">Mal.</button></a>
-            </div>
-            <div class="column right">
-                  <h1>Noul Testament</h1>
-                        <a href="Mat.html"><button class="filler">Mat.</button></a>
+        </div>
+        <div class="grid-item">
+            <h1>Noul Testament</h1>
+            <a href="Mat.html"><button class="filler">Mat.</button></a>
                         <a href="Marc.html"><button class="filler">Marc.</button></a>
                         <a href="Luc.html"><button class="filler">Luc.</button></a>
                         <a href="Ioan.html"><button class="filler">Ioan.</button></a>
@@ -139,25 +128,34 @@
                         <a href="3Ioan.html"> <button class="filler">3Ioan.</button></a>
                         <a href="Iuda.html"> <button class="filler">Iuda.</button></a>
                         <a href="Apoc.html"> <button class="filler">Apoc.</button></a>
-            </div>
-          </div>
-          
+        </div>
+    </div>
 
 
-          <script>
-            const list = document.querySelectorAll('.list');
-            function activeLink(){
-                list.forEach((item) =>
-                item.classList.remove('active'));
-                this.classList.add('active');
-            }
+
+
+
+
+
+
+    
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
             list.forEach((item) =>
-            item.addEventListener('click',activeLink));
-        </script>
-          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink));
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
-            </div>
-      </body>
+        
+    
+
+</div>
+</body>
 </html>
